@@ -48,8 +48,8 @@ export default function ComparisonSection({ onOpenConsultation }: ComparisonProp
   ];
 
   return (
-    <section id="why-us" className="py-20 lg:py-28 bg-[#F4EFE6] relative border-y border-stone-200/90">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8">
+    <section id="why-us" className="py-20 lg:py-28 bg-[#F4EFE6] relative border-y border-stone-200/90 w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 w-full">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -65,9 +65,9 @@ export default function ComparisonSection({ onOpenConsultation }: ComparisonProp
           </p>
         </div>
 
-        {/* Comparison Table in Clean White */}
-        <div className="overflow-x-auto">
-          <div className="min-w-[720px] rounded-3xl bg-white border border-stone-300 shadow-xl overflow-hidden">
+        {/* Comparison Table in Clean White with horizontal scrolling wrapper */}
+        <div className="w-full max-w-full overflow-x-auto pb-4">
+          <div className="min-w-[700px] w-full rounded-3xl bg-white border border-stone-300 shadow-xl overflow-hidden">
             {/* Table Header */}
             <div className="grid grid-cols-12 bg-stone-100 p-5 sm:p-6 border-b border-stone-200 text-sm font-bold">
               <div className="col-span-4 text-slate-600 uppercase tracking-wider text-xs">
@@ -104,7 +104,7 @@ export default function ComparisonSection({ onOpenConsultation }: ComparisonProp
                     <span>{row.traditional}</span>
                   </div>
 
-                  <div className="col-span-4 text-slate-900 flex items-start justify-between gap-2 text-xs sm:text-sm bg-blue-50/80 -my-3 p-3.5 rounded-xl border border-blue-200/90 shadow-xs">
+                  <div className="col-span-4 text-slate-900 flex items-start justify-between gap-2 text-xs sm:text-sm bg-blue-50/80 p-3 rounded-xl border border-blue-200/90 shadow-xs">
                     <div className="flex items-start gap-2.5">
                       <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
                         <Check className="w-3.5 h-3.5 stroke-[3]" />
@@ -122,7 +122,7 @@ export default function ComparisonSection({ onOpenConsultation }: ComparisonProp
         </div>
 
         {/* CTA Banner under comparison */}
-        <div className="mt-12 rounded-3xl bg-[#0F172A] p-7 sm:p-10 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl">
+        <div className="mt-12 rounded-3xl bg-[#0F172A] p-7 sm:p-10 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl w-full">
           <div>
             <h3 className="text-xl sm:text-2xl font-extrabold text-white">
               Ready to upgrade from fragmented agencies to strategic HR excellence?

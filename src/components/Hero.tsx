@@ -37,7 +37,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
   };
 
   return (
-    <section className="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-[#FAF7F2] border-b border-stone-200/80">
+    <section className="relative overflow-hidden w-full pt-12 pb-20 lg:pt-20 lg:pb-28 bg-[#FAF7F2] border-b border-stone-200/80">
       {/* Background Architectural Stock Photo with Soft Cream Overlay */}
       <div 
         className="absolute inset-0 opacity-[0.035] bg-cover bg-center pointer-events-none"
@@ -47,18 +47,18 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
       ></div>
 
       {/* Ambient Warm Gradients & Subtle Grid */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[850px] h-[500px] bg-gradient-to-b from-blue-100/40 via-amber-100/20 to-transparent blur-3xl rounded-full"></div>
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[850px] max-w-full h-[500px] bg-gradient-to-b from-blue-100/40 via-amber-100/20 to-transparent blur-3xl rounded-full"></div>
         <div className="absolute top-1/3 -left-32 w-80 h-80 bg-blue-100/30 blur-3xl rounded-full"></div>
         <div className="absolute top-1/2 -right-32 w-96 h-96 bg-amber-100/40 blur-3xl rounded-full"></div>
         <div className="absolute inset-0 subtle-grid opacity-50"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-8 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
           
           {/* Left Column: Headline, Subtitle, Trust Metrics */}
-          <div className="lg:col-span-7 flex flex-col space-y-6">
+          <div className="lg:col-span-7 flex flex-col space-y-6 w-full">
             
             {/* Pill Badge with Live Indicator */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-bold text-blue-700 w-fit shadow-xs">
@@ -177,8 +177,8 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
           </div>
 
           {/* Right Column: Interactive Instant Talent Match Widget in Crisp White */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative rounded-3xl bg-white p-6 sm:p-8 border border-stone-200 shadow-xl">
+          <div className="lg:col-span-5 relative w-full">
+            <div className="relative rounded-3xl bg-white p-6 sm:p-8 border border-stone-200 shadow-xl w-full">
               
               {/* Header inside widget */}
               <div className="flex items-center justify-between pb-5 border-b border-stone-200">
@@ -217,7 +217,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
                   </select>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                       Seniority Level
@@ -290,7 +290,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
                   </p>
                   <button
                     onClick={onOpenConsultation}
-                    className="mt-1 w-full py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-xs font-bold text-white flex items-center justify-center gap-1.5 transition shadow-xs"
+                    className="mt-1 w-full py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-xs font-bold text-white flex items-center justify-center gap-1.5 transition shadow-xs cursor-pointer"
                   >
                     <span>Request Vetted Shortlist for This Role</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -299,7 +299,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
               )}
 
               {/* Mini Guarantees Footer */}
-              <div className="mt-4 pt-4 border-t border-stone-200 flex items-center justify-between text-[11px] text-slate-600 font-medium">
+              <div className="mt-4 pt-4 border-t border-stone-200 flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-600 font-medium">
                 <span className="flex items-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5 text-blue-600" />
                   90-Day Free Replacement
@@ -311,8 +311,8 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
               </div>
             </div>
 
-            {/* Floating Glass Pill 1 */}
-            <div className="hidden sm:flex absolute -bottom-6 -left-6 rounded-2xl bg-white border border-stone-200 p-3.5 shadow-xl items-center gap-3">
+            {/* Floating Glass Pills positioned safely */}
+            <div className="hidden xl:flex absolute -bottom-6 -left-6 rounded-2xl bg-white border border-stone-200 p-3.5 shadow-xl items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center">
                 <TrendingUp className="w-5 h-5" />
               </div>
@@ -322,8 +322,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
               </div>
             </div>
 
-            {/* Floating Glass Pill 2 */}
-            <div className="hidden sm:flex absolute -top-5 -right-5 rounded-2xl bg-white border border-stone-200 p-3.5 shadow-xl items-center gap-3">
+            <div className="hidden xl:flex absolute -top-5 -right-5 rounded-2xl bg-white border border-stone-200 p-3.5 shadow-xl items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 border border-blue-100 flex items-center justify-center">
                 <Award className="w-5 h-5" />
               </div>

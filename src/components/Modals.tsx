@@ -60,7 +60,7 @@ export function ConsultationModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm animate-fadeIn">
       <div
-        className="relative w-full max-w-xl rounded-3xl bg-white border border-stone-200 p-6 sm:p-8 shadow-2xl overflow-hidden"
+        className="relative w-full max-w-xl max-h-[90vh] overflow-y-auto rounded-3xl bg-white border border-stone-200 p-6 sm:p-8 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -284,7 +284,7 @@ export function QuickApplyModal({ isOpen, onClose, jobTitle }: QuickApplyModalPr
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm animate-fadeIn">
       <div
-        className="relative w-full max-w-xl rounded-3xl bg-white border border-stone-200 p-6 sm:p-8 shadow-2xl overflow-hidden"
+        className="relative w-full max-w-xl max-h-[90vh] overflow-y-auto rounded-3xl bg-white border border-stone-200 p-6 sm:p-8 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button
